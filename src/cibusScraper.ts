@@ -1,21 +1,21 @@
 import puppeteer, { PuppeteerLaunchOptions } from "puppeteer";
 import { logger } from "./logger";
 
-export interface CibusScrapperOptions {
+export interface CibusScraperOptions {
   username: string;
   password: string;
   company: string;
   puppeteerLaunchOptions?: PuppeteerLaunchOptions;
 }
 
-export interface CibusScrapperResult {
+export interface CibusScraperResult {
   balance: number;
 }
 
-export class CibusScrapper {
+export class CibusScraper {
   constructor() {}
-  async scrap({ puppeteerLaunchOptions, username, password, company }: CibusScrapperOptions) {
-    return new Promise<CibusScrapperResult>(async (resolve, reject) => {
+  async scrap({ puppeteerLaunchOptions, username, password, company }: CibusScraperOptions) {
+    return new Promise<CibusScraperResult>(async (resolve, reject) => {
       logger.info("Start scrapping Cibus...");
       const browser = await puppeteer.launch(puppeteerLaunchOptions);
       const page = await browser.newPage();

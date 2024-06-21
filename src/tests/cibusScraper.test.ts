@@ -1,13 +1,13 @@
-import { CibusScrapper } from "../cibusScrapper";
+import { CibusScraper } from "../cibusScraper";
 import { options } from "./testConfig";
 
 jest.setTimeout(60000);
 
 describe("CibusScrapper", () => {
-  let scrapper: CibusScrapper;
+  let scrapper: CibusScraper;
 
   beforeEach(() => {
-    scrapper = new CibusScrapper();
+    scrapper = new CibusScraper();
   });
 
   it("scrap method navigates to login and fills form", async () => {

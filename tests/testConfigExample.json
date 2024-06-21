@@ -1,0 +1,10 @@
+{
+  "username": "",
+  "password": "",
+  "company": "",
+  "puppeteerLaunchOptions": {
+    "headless": false,
+    "slowMo": 20,
+    "devtools": true
+  }
+}

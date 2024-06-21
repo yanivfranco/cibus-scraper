@@ -8,7 +8,7 @@
   "packageManager": "yarn@1.22.17",
   "homepage": "https://github.com/yanivfranco/cibus-scraper",
   "scripts": {
-    "build": "tsc",
+    "build": "tsc -p tsconfig.build.json",
     "test": "jest"
   },
   "dependencies": {

@@ -1,12 +1,11 @@
-// @ts-ignore - This file is ignored by git, so we need to ignore the ts check in order to pass build
-import { CibusScraper } from "../cibusScraper";
-import { options } from "./testConfig";
+import { readFileSync } from "fs";
+import { CibusScraper, CibusScraperOptions } from "../src/cibusScraper";
 
 jest.setTimeout(60000);
 
 describe("CibusScrapper", () => {
   let scrapper: CibusScraper;
-
+  const options = JSON.parse(readFileSync("tests/testConfig.json", "utf8")) as CibusScraperOptions;
   beforeEach(() => {
     scrapper = new CibusScraper();
   });

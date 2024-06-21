@@ -1,0 +1,6 @@
+node_modules
+.env*
+data/*
+cache/*
+dist/*
+src/tests/testConfig.ts

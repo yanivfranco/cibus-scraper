@@ -21,6 +21,8 @@ jobs:
         run: yarn build
       - name: Log NPM Token
         run: echo ${{ secrets.NPM_TOKEN }}
+        env:
+          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
       - name: Release to Github and NPM
         uses: cycjimmy/semantic-release-action@v4.1.0
         with:

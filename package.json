@@ -3,8 +3,8 @@
   "version": "1.0.0",
   "author": "yanivfranco@gmail.com",
   "license": "MIT",
-  "main": "dist/index.js",
-  "types": "dist/index.d.ts",
+  "main": "dist/cibusScraper.js",
+  "types": "dist/cibusScraper.d.ts",
   "packageManager": "yarn@1.22.17",
   "homepage": "https://github.com/yanivfranco/cibus-scraper",
   "scripts": {

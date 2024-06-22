@@ -19,7 +19,7 @@ jobs:
         run: yarn --frozen-lockfile
       - name: build
         run: yarn build
-      - name: Release to Github
+      - name: Release to Github and NPM
         uses: cycjimmy/semantic-release-action@v4.1.0
         with:
           branches: |
@@ -44,9 +44,9 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+        timeout-minutes: 10
 permissions:
   contents: write
   packages: write
   issues: write
   pull-requests: write
-timeout-minutes: 10

@@ -13,5 +13,7 @@
       "@semantic-release/commit-analyzer",
       ["@semantic-release/github", { "successComment": false, "failTitle": false }],
       "@semantic-release/release-notes-generator",
+      "@semantic-release/changelog",
+      "@semantic-release/npm",
     ],
 }

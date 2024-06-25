@@ -6,6 +6,7 @@ export interface CibusScraperOptions {
   password: string;
   company: string;
   puppeteerLaunchOptions?: PuppeteerLaunchOptions;
+  silent?: boolean;
 }
 
 export interface CibusScraperResult {
@@ -14,8 +15,12 @@ export interface CibusScraperResult {
 
 export class CibusScraper {
   constructor() {}
-  async scrap({ puppeteerLaunchOptions, username, password, company }: CibusScraperOptions) {
+  async scrap({ puppeteerLaunchOptions, username, password, company, silent }: CibusScraperOptions) {
     return new Promise<CibusScraperResult>(async (resolve, reject) => {
+      if (silent) {
+        logger.level = "silent";
+      }
+
       logger.info("Start scrapping Cibus...");
       const browser = await puppeteer.launch(puppeteerLaunchOptions);
       const page = await browser.newPage();
